@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <title>Ephantronics</title>
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/home.css">    
+    <link rel="stylesheet" href="styles/product.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<header class="header">
+    <h6 class="logo">Ephantronics</h6>
+    <div id="search-container" class="search-bar">
+        <input type="text" placeholder="Search for products..." oninput="searchProducts(this.value)">
+        <button class="search-btn">🔍</button>
+    </div>
+    <div class="header-icons">
+        <div class="cart">
+            <div id="cart-container" style="display: none;"></div>
+            <a class="View Cart" href="cart.html">
+                <button id="cart-button" onclick="document.innerHTML(cart1)">🛒</button><a>
+            <span id="cart-count">0</span>
+        </div>
+        <div class="login">
+            <a href="logIn.html"><button id="login-button" title="Log In">👤</button></a>
+        </div>
+    </div> 
+    
+    <button class="menu-icon">&#9776;</button> 
+    <div class="menus">
+        <button class="category"><a href="#home">Home</a></button>
+        <button class="category dropbtn">Category</button>
+        <div class="category-menus">
+            <div class="row js-dropdown">
+            <div class="column"></div>
+            </div>      
+        </div>
+        <button class="category"><a href="#home">Home</a></button>
+    </div>
+</header>
+
+<div class="categories js-categories"></div>
+
+<section>
+    <div class="home-background"></div>
+
+    <button class="shop-now">Shop Now</button>
+
+    <div class="hero-slider"></div>
+</section>
+
+<main id="product-id" class="products">
+    <section class="smartphones js-products"></section>
+</main>
+
+<footer>
+
+    <div class="footer-container">
+  
+      <div class="footer-section">
+          <h3>About Us</h3>
+          <p1 class="para">We are a leading provider of quality electronics,</p1>
+          <p1>offering a wide range of products to meet your needs.</p1>
+      </div>
+        
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+        
+      <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p1 class="para">Email: muephanzz@gmail.com<br></p1>
+          <p1 class="para">Phone: +254 798 229 783</p1>
+      </div>
+  
+      <div class="footer-section footer-social">
+          <h3>Follow Us</h3>
+          <a href=""><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-whatsapp"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+      </div>
+  
+    </div>
+      
+    <div class="footer-bottom">
+        <p1 class="para par">&copy; 2025 Your Company Name. All Rights Reserved.</p1>
+    </div>
+  
+  </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

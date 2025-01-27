@@ -1,0 +1,30 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+  }
+
+  /* Media Query for Phones */
+@media screen and (max-width: 768px) {
+    .product {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+  
+@media screen and (max-width: 480px) {
+    .product {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }

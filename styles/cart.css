@@ -1,0 +1,124 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ff98e0ab;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #252525e1;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+ 
+.header-text h1{
+    display: inline;
+}
+
+
+main {
+    padding: 5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: auto;
+}
+
+.cart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 1.5rem;
+}
+
+.cart-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item h3 {
+    margin: 0 0 1rem;
+}
+
+.price {
+    color: #f32011;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #fa1515;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #fd0303a6;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.empty-cart a {
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 80%;
+    position: relative;
+    background: #333;
+    color: rgba(255, 255, 255, 0.603);
+    text-align: center;
+    padding: 0.05rem 0;
+    
+}
+
+footer a {
+    color: #f30202af;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #ff3f3fab;
+}
+
+.btn2 {
+    text-decoration: none;
+    display: flex; 
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Align items vertically */
+    margin: 2rem 0;
+    padding: 0.4rem 0.8rem;
+    background: #ff1c1cf1;
+    color: white; /* Text color */
+    font-size: 1rem; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center text inside button */
+}
+
+.btn2:hover {
+    background-color: #ff4949d2;
+}
+.btn3 {
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 1rem; /* Space between buttons */
+    margin: 2rem 0; /* Add space above and below the container */
+}
