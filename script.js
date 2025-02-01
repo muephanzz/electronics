@@ -1,4 +1,4 @@
-import { renderProducts } from "./products.js";
+import { renderProducts, toggleViewMore } from "./products.js";
 
 const slideshow = [
   {
@@ -49,52 +49,20 @@ setInterval(() => {
 const dropdown = [
   {
     category: "smartphones",
-    type1: "Redmi",
-    type2: "Oppo",
-    type3: "Samsung",
-    type4: "Techno",
-  },{
+    types: ["Redmi", "Oppo", "Samsung", "Techno"],
+  },
+  {
     category: "laptops",
-    type1: "Mac",
-    type2: "Lenovo",
-    type3: "Hp",
-    type4: "Dell",
-  },{
-    category: "laptops",
-    type1: "Mac",
-    type2: "Lenovo",
-    type3: "Hp",
-    type4: "Dell",
-  },{
-    category: "laptops",
-    type1: "Mac",
-    type2: "Lenovo",
-    type3: "Hp",
-    type4: "Dell",
-  },{
-    category: "laptops",
-    type1: "Mac",
-    type2: "Lenovo",
-    type3: "Hp",
-    type4: "Dell",
-  },{
-    category: "laptops",
-    type1: "Mac",
-    type2: "Lenovo",
-    type3: "Hp",
-    type4: "Dell",
-  }
+    types: ["Mac", "Lenovo", "Hp", "Dell"],
+  },
 ];
 
 let dropdownHTML = "";
-dropdown.forEach((category) => {
+dropdown.forEach(({ category, types }) => {
   dropdownHTML += `
     <div class="column">
-      <h3>${category.category}</h3>
-      <a href="#" data-brand="${category.type1}">${category.type1}</a>
-      <a href="#" data-brand="${category.type2}">${category.type2}</a>
-      <a href="#" data-brand="${category.type3}">${category.type3}</a>
-      <a href="#" data-brand="${category.type4}">${category.type4}</a>
+      <h3>${category}</h3>
+      ${types.map((type) => `<a href="#" data-brand="${type}">${type}</a>`).join("")}
     </div>
   `;
 });
@@ -124,3 +92,37 @@ document.querySelectorAll(".js-dropdown a").forEach((link) => {
 
 // Render all products by default
 renderProducts();
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Sidebar Toggle
+  const menuIcon = document.querySelector(".menu-icon");
+  const sidebar = document.querySelector(".menus");
+  
+  if (menuIcon) {
+      menuIcon.addEventListener("click", function () {
+          sidebar.classList.toggle("active");
+      });
+  }
+
+  // Dropdown Toggle
+  const dropdownTrigger = document.querySelector(".category-dropdown");
+  const dropdownMenu = document.querySelector(".category-menus");
+
+  if (dropdownTrigger && dropdownMenu) {
+      dropdownTrigger.addEventListener("click", function () {
+          dropdownMenu.classList.toggle("show");
+      });
+  }
+
+  // Cart Bounce Animation
+  const cartIcon = document.querySelector(".cart-icon");
+  function animateCart() {
+      if (cartIcon) {
+          cartIcon.classList.add("bounce");
+          setTimeout(() => cartIcon.classList.remove("bounce"), 500);
+      }
+  }
+
+  // Simulate Cart Update (for testing)
+  setTimeout(animateCart, 2000);
+});
